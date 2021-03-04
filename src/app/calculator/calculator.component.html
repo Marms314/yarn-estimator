@@ -1,1 +1,89 @@
-<p>calculator works!</p>
+<div class="container my-3">
+    <p class="text-center pt-5">
+        When you're trying to use up a box of yarn scraps and minis of unknown lengths, it's a gamble to choose one that will be the right length.
+        The calculator below is meant to estimate the length of the mini or scrap based on the weight and weight. (Thickness and gravitaional pull, respectively. ;D)
+    </p>
+
+
+    <form class="mx-auto rounded">
+        <H4>Step 1</H4>
+        <p>Enter the weight of the scrap yarn for which you need an estimated length.</p>
+        <div class="form-group">
+            <label for="scrapHeaviness">Scrap Yarn Weight (Gravitational Pull)</label>
+            <div class="form-row">
+                <div class="col-8 my-auto">
+                    <input type="number" class="form-control" name="scrapHeaviness" required>
+                </div>
+                <div class="mx-auto">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="scrapHeavinessUOM" id="grams" value="grams" checked>
+                        <label class="form-check-label" for="grams">Grams</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="scrapHeavinessUOM" id="ounces" value="ounces">
+                        <label class="form-check-label" for="ounces">Ounces</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <H4>Step 2</H4>
+        <p>You only need to fill one of the two options below. If you fill out option two, it will take precedence over option one since it should be more accurate. </p>
+
+        <H5>(Option 1)</H5>
+        <p>Choose the weight (thickness) of the yarn scrap or mini skein you want to estimate.</p>
+        <div class="form-group">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Weight Category</label>
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option value="0">0 - Lace</option>
+                <option value="1" selected>1 - Superfine</option>
+                <option value="2">2 - Fine</option>
+                <option value="3">3 -Light</option>
+                <option value="4">4 - Medium</option>
+                <option value="5">5 - Bulky</option>
+                <option value="6">6 - Super Bulky</option>
+            </select>
+        </div>
+
+        <H5>(Option 2)</H5>
+        <p>If you still have the label/ball band for the skein, enter the weight and length below for a more accurate estimate.</p>
+        <div class="form-group">
+            <label for="skeinHeaviness">Weight on Ball Band (Gravitational Pull)</label>
+            <div class="form-row">
+                <div class="col-8 my-auto">
+                    <input type="number" class="form-control" name="skeinHeaviness" required>
+                </div>
+                <div class="mx-auto">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="skeinHeavinessUOM" id="grams" value="grams" checked>
+                        <label class="form-check-label" for="grams">Grams</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="skeinHeavinessUOM" id="ounces" value="ounces">
+                        <label class="form-check-label" for="ounces">Ounces</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="skeinLength">Length on Ball Band</label>
+            <div class="form-row">
+                <div class="col-8 my-auto">
+                    <input type="number" class="form-control" name="skeinLength" required>
+                </div>
+                <div class="mx-auto">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="skeinLengthUOM" id="grams" value="grams" checked>
+                        <label class="form-check-label" for="grams">yards</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="skeinLengthUOM" id="ounces" value="ounces">
+                        <label class="form-check-label" for="ounces">meters</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-block btn-secondary mb-2">Estimate</button>
+    </form>
+
+</div>
